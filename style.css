@@ -19,3 +19,11 @@ section {
   padding: 20px;
   border: 1px solid #e3e3e3;
 }
+
+/* Make individual sections easier to distinguish. */
+main section {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #d5dce5;
+  border-radius: 6px;
+}
