@@ -1,0 +1,32 @@
+$ git fetch origin
+From https://github.com/Hafsa-mhf/git-session1-Hafsa-mhf
+   7fffcd6..54ed6e8  main       -> origin/main
+$ git status -sb
+## main...origin/main [behind 1]
+$ git log --oneline main..origin/main
+54ed6e8 Update README directly on GitHub
+$ git diff --stat main..origin/main
+ README.md | 3 +++
+ 1 file changed, 3 insertions(+)
+$ git pull --ff-only origin main
+From https://github.com/Hafsa-mhf/git-session1-Hafsa-mhf
+ * branch            main       -> FETCH_HEAD
+Updating 7fffcd6..54ed6e8
+Fast-forward
+ README.md | 3 +++
+ 1 file changed, 3 insertions(+)
+$ git status -sb
+## main...origin/main
+$ git log --oneline --graph --all
+* 54ed6e8 Update README directly on GitHub
+* 7fffcd6 Confirm the GitHub account identity
+* 9555b09 Replace the report with the updated PDF
+* 1489f7e Add the AI-disclosed local report and workflow evidence
+*   a46ee83 Merge the About feature into main
+|\  
+| * 813ba1c Add the About feature on its own branch
+|/  
+* 2e57c24 Update the project status message
+* d2ad1f8 Improve section spacing and borders
+* 92e9dfa Clarify the project overview
+* 86c89fe Initialize starter project with README and ignore rules
