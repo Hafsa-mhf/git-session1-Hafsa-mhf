@@ -1,0 +1,19 @@
+Troubleshooting: the broad *.log rule initially ignores important.log.
+Actual output captured in the AI-assisted execution environment.
+UTC: 2026-10-12T12:02:58+00:00
+
+$ git status --short --ignored
+?? .gitignore
+?? app.js
+?? assets/
+?? index.html
+?? notes.txt
+?? style.css
+!! app.log
+!! debug.log
+!! important.log
+!! local.env
+
+$ git check-ignore -v important.log
+.gitignore:2:*.log	important.log
+

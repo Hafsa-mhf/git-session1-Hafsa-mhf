@@ -1,0 +1,191 @@
+Troubleshooting: the broad *.log rule initially ignores important.log.
+Actual output captured in the AI-assisted execution environment.
+UTC: 2026-10-12T12:02:58+00:00
+
+$ git status --short --ignored
+?? .gitignore
+?? app.js
+?? assets/
+?? index.html
+?? notes.txt
+?? style.css
+!! app.log
+!! debug.log
+!! important.log
+!! local.env
+
+$ git check-ignore -v important.log
+.gitignore:2:*.log	important.log
+
+
+Troubleshooting resolution: the exception keeps important.log visible while normal logs and local.env remain ignored.
+Actual output captured in the AI-assisted execution environment.
+UTC: 2026-10-12T12:02:58+00:00
+
+$ git status --short --ignored
+?? .gitignore
+?? app.js
+?? assets/
+?? important.log
+?? index.html
+?? notes.txt
+?? style.css
+!! app.log
+!! debug.log
+!! local.env
+
+$ git check-ignore -v local.env app.log debug.log
+.gitignore:1:local.env	local.env
+.gitignore:2:*.log	app.log
+.gitignore:2:*.log	debug.log
+
+
+Two already tracked files are modified together: index.html and style.css.
+Actual output captured in the AI-assisted execution environment.
+UTC: 2026-10-12T12:02:58+00:00
+
+$ git status --short
+ M index.html
+ M style.css
+
+$ git diff --stat
+ index.html | 2 +-
+ style.css  | 8 ++++++++
+ 2 files changed, 9 insertions(+), 1 deletion(-)
+
+
+Selective staging: only index.html is staged; the CSS change remains unstaged. Both diff types are shown.
+Actual output captured in the AI-assisted execution environment.
+UTC: 2026-10-12T12:02:58+00:00
+
+$ git status --short
+M  index.html
+ M style.css
+
+$ git diff --cached -- index.html
+diff --git a/index.html b/index.html
+index 21e74f5..fa80475 100644
+--- a/index.html
++++ b/index.html
+@@ -14,7 +14,7 @@
+   <main>
+     <section id="overview">
+       <h2>Project Overview</h2>
+-      <p>This small project will evolve throughout the assignment.</p>
++      <p>This project demonstrates organized commits, feature branching, and synchronization with GitHub.</p>
+     </section>
+     <section id="status">
+       <h2>Status</h2>
+
+$ git diff -- style.css
+diff --git a/style.css b/style.css
+index b93e076..fae9c24 100644
+--- a/style.css
++++ b/style.css
+@@ -19,3 +19,11 @@ section {
+   padding: 20px;
+   border: 1px solid #e3e3e3;
+ }
++
++/* Make individual sections easier to distinguish. */
++main section {
++  padding: 1rem;
++  margin-bottom: 1rem;
++  border: 1px solid #d5dce5;
++  border-radius: 6px;
++}
+
+
+After the HTML-only commit, style.css remains modified and uncommitted.
+Actual output captured in the AI-assisted execution environment.
+UTC: 2026-10-12T12:02:58+00:00
+
+$ git status --short
+ M style.css
+
+$ git diff -- style.css
+diff --git a/style.css b/style.css
+index b93e076..fae9c24 100644
+--- a/style.css
++++ b/style.css
+@@ -19,3 +19,11 @@ section {
+   padding: 20px;
+   border: 1px solid #e3e3e3;
+ }
++
++/* Make individual sections easier to distinguish. */
++main section {
++  padding: 1rem;
++  margin-bottom: 1rem;
++  border: 1px solid #d5dce5;
++  border-radius: 6px;
++}
+
+
+Before merging: main is unchanged by the About feature; feature-about contains the separate feature commit.
+Actual output captured in the AI-assisted execution environment.
+UTC: 2026-10-12T12:02:58+00:00
+
+$ git branch --list
+  feature-about
+* main
+
+$ git log --graph --oneline --decorate --all
+* 813ba1c (feature-about) Add the About feature on its own branch
+* 2e57c24 (HEAD -> main) Update the project status message
+* d2ad1f8 Improve section spacing and borders
+* 92e9dfa Clarify the project overview
+* 86c89fe Initialize starter project with README and ignore rules
+
+
+The About feature has been merged into main with an explicit merge commit.
+Actual output captured in the AI-assisted execution environment.
+UTC: 2026-10-12T12:02:58+00:00
+
+$ git branch --list
+  feature-about
+* main
+
+$ git log --graph --oneline --decorate --all
+*   a46ee83 (HEAD -> main) Merge the About feature into main
+|\  
+| * 813ba1c (feature-about) Add the About feature on its own branch
+|/  
+* 2e57c24 Update the project status message
+* d2ad1f8 Improve section spacing and borders
+* 92e9dfa Clarify the project overview
+* 86c89fe Initialize starter project with README and ignore rules
+
+
+Tracked files include important.log and the provided banner; local.env and ordinary logs remain ignored.
+Actual output captured in the AI-assisted execution environment.
+UTC: 2026-10-12T12:02:58+00:00
+
+$ git ls-files
+.gitignore
+README.md
+app.js
+assets/project-banner.svg
+important.log
+index.html
+notes.txt
+style.css
+
+$ git status --short --ignored
+!! app.log
+!! debug.log
+!! local.env
+
+
+Five meaningful content commits plus one merge commit are recorded before the report is added.
+Actual output captured in the AI-assisted execution environment.
+UTC: 2026-10-12T12:02:58+00:00
+
+$ git log --oneline --all
+813ba1c Add the About feature on its own branch
+a46ee83 Merge the About feature into main
+2e57c24 Update the project status message
+d2ad1f8 Improve section spacing and borders
+92e9dfa Clarify the project overview
+86c89fe Initialize starter project with README and ignore rules
+

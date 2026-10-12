@@ -1,0 +1,19 @@
+Tracked files include important.log and the provided banner; local.env and ordinary logs remain ignored.
+Actual output captured in the AI-assisted execution environment.
+UTC: 2026-10-12T12:02:58+00:00
+
+$ git ls-files
+.gitignore
+README.md
+app.js
+assets/project-banner.svg
+important.log
+index.html
+notes.txt
+style.css
+
+$ git status --short --ignored
+!! app.log
+!! debug.log
+!! local.env
+

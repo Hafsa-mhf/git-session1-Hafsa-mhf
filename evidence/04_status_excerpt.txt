@@ -1,0 +1,7 @@
+Selective staging: only index.html is staged; the CSS change remains unstaged. Both diff types are shown.
+Actual output captured in the AI-assisted execution environment.
+UTC: 2026-10-12T12:02:58+00:00
+
+$ git status --short
+M  index.html
+ M style.css

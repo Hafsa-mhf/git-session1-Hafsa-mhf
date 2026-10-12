@@ -1,0 +1,41 @@
+Selective staging: only index.html is staged; the CSS change remains unstaged. Both diff types are shown.
+Actual output captured in the AI-assisted execution environment.
+UTC: 2026-10-12T12:02:58+00:00
+
+$ git status --short
+M  index.html
+ M style.css
+
+$ git diff --cached -- index.html
+diff --git a/index.html b/index.html
+index 21e74f5..fa80475 100644
+--- a/index.html
++++ b/index.html
+@@ -14,7 +14,7 @@
+   <main>
+     <section id="overview">
+       <h2>Project Overview</h2>
+-      <p>This small project will evolve throughout the assignment.</p>
++      <p>This project demonstrates organized commits, feature branching, and synchronization with GitHub.</p>
+     </section>
+     <section id="status">
+       <h2>Status</h2>
+
+$ git diff -- style.css
+diff --git a/style.css b/style.css
+index b93e076..fae9c24 100644
+--- a/style.css
++++ b/style.css
+@@ -19,3 +19,11 @@ section {
+   padding: 20px;
+   border: 1px solid #e3e3e3;
+ }
++
++/* Make individual sections easier to distinguish. */
++main section {
++  padding: 1rem;
++  margin-bottom: 1rem;
++  border: 1px solid #d5dce5;
++  border-radius: 6px;
++}
+

@@ -1,0 +1,45 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Assignment 1 Report - 158085</title><style>body{font:15px/1.55 Arial,sans-serif;max-width:900px;margin:35px auto;color:#152438;padding:0 25px}h1{font-size:29px;color:#173b63}h2{font-size:20px;color:#173b63;border-bottom:1px solid #cbd5e1;padding-bottom:6px}table{border-collapse:collapse;width:100%;margin:12px 0}td,th{border:1px solid #ccd6e1;padding:8px;text-align:left}th{background:#edf3f9}.notice{background:#fff3d6;border-left:5px solid #bd7b00;padding:14px}.caption{font-size:12px;color:#526276}img{max-width:100%}pre{background:#edf3f9;padding:12px;white-space:pre-wrap;font-size:12px}button{padding:10px 16px;margin:10px 0}@media print{body{margin:0;font-size:11pt;max-width:none}.no-print{display:none}h2{break-after:avoid}img,table{break-inside:avoid}}</style></head><body>
+<div class="no-print"><button onclick="window.print()">Print / Save as PDF</button><p>Edit the draft text directly on this page before printing. Complete the GitHub steps first. Save the PDF as Assignment1_Report_158085.pdf inside the project.</p></div>
+<h1>Assignment 1 - Git &amp; GitHub Fundamentals</h1>
+<p><strong>Full name:</strong> Hafsa El Mahfoudy<br><strong>Student ID:</strong> 158085<br><strong>Course &amp; section:</strong> CSC 3324 01<br><strong>GitHub username:</strong> USERNAME_PENDING<br><strong>Display name supplied:</strong> Hafsa mhf</p>
+<div class="notice"><strong>Report status:</strong> LOCAL WORK COMPLETE. REMOTE_PENDING. The exact account handle and the final reflection need review.</div>
+<section><h2>1. Repository Setup</h2>
+<p contenteditable="true">The provided STARTER files were copied into a new repository and initialized with git init -b main. The final .gitignore contains local.env, *.log, and !important.log. The first two rules ignore the local configuration and ordinary logs; the exception keeps important.log available to Git.</p>
+<p contenteditable="true">A simple issue was demonstrated and solved: the broad *.log pattern initially ignored important.log. Adding !important.log corrected that result. Before/after command captures are stored in evidence/01_ignore_before and evidence/02_ignore_after.</p>
+<pre>local.env
+*.log
+!important.log</pre><img src="../evidence/02_ignore_after.png"><p class="caption">Actual Git output, rendered as a readable capture. This is not a screenshot of the student's laptop.</p>
+</section>
+<section><h2>2. README &amp; Commit History</h2>
+<p contenteditable="true">README.md contains my name, student ID, course/section, the supplied display name, a project description, a technologies list, a Bash code block, a documentation link, and the provided assets/project-banner.svg image. USERNAME_PENDING marks the exact GitHub handle that must be confirmed.</p>
+<p contenteditable="true">Five content commits record setup, the overview improvement, CSS styling, the JavaScript status message, and the About feature. An explicit merge commit integrates the feature. The PDF and evidence are added in an additional commit after the workflow captures.</p>
+<table><tr><th>Commit</th><th>Change</th></tr>
+<tr><td>86c89fe</td><td>Initialize starter project with README and ignore rules</td></tr>
+<tr><td>92e9dfa</td><td>Clarify the project overview</td></tr>
+<tr><td>d2ad1f8</td><td>Improve section spacing and borders</td></tr>
+<tr><td>2e57c24</td><td>Update the project status message</td></tr>
+<tr><td>813ba1c</td><td>Add the About feature on its own branch</td></tr>
+<tr><td>a46ee83</td><td>Merge the About feature into main</td></tr>
+</table>
+</section>
+<section><h2>3. Selective Staging</h2>
+<p contenteditable="true">After the initial commit, index.html and style.css were modified together. Only index.html was staged with git add index.html and committed first. The remaining CSS modification was confirmed with git status and git diff before a separate CSS commit.</p>
+<p contenteditable="true">The evidence includes a full unstaged diff and staged diff. In the status excerpt, M in the left column for index.html means staged; M in the right column for style.css means modified but unstaged.</p>
+<img src="../evidence/04_status_excerpt.png"><p class="caption">Excerpt of the actual selective-staging capture. Full staged and unstaged diffs are included in evidence/04_selective_staging.txt.</p>
+</section>
+<section><h2>4. Branch &amp; Merge</h2>
+<p contenteditable="true">The feature-about branch was created with git switch -c feature-about. An About section was added to index.html and committed on that branch. After switching back to main, the feature was merged using git merge --no-ff feature-about. The explicit merge commit makes the branch integration visible in the graph.</p>
+<p contenteditable="true">The About section was verified to be absent from main before merging and present afterward. The feature branch is retained for inspection.</p>
+<img src="../evidence/07_branch_merge.png"><p class="caption">Actual branch/merge output captured before the report commit.</p>
+</section>
+<section><h2>5. Remote Changes</h2>
+<p>A commit saves staged changes in the local repository; push publishes local commits to a remote. Fetch downloads remote information and updates remote-tracking references without changing working files. Pull fetches and integrates remote changes into the current branch.</p><!--REMOTE_START--><p contenteditable="true">PENDING: create the correctly named empty GitHub repository, publish main, edit README directly on GitHub, fetch and capture local main behind origin/main before pulling, then pull and verify the edited sentence. These operations have not been performed. The provided Finish_GitHub.sh guide records the actual evidence when they are completed.</p><!--REMOTE_END-->
+</section>
+<section><h2>6. Fair Use of AI</h2>
+<p contenteditable="true">AI assistance was used to interpret the assignment, prepare the README and source edits, execute the local Git workflow, and draft this report after my laptop became unresponsive. My prompts asked for a step-by-step explanation and then an assignment package. The generated work was checked by the assistant using actual Git status, diff, log, ignore-rule, branch and merge outputs. Those checks were performed in the assistant&#x27;s execution environment, not on my laptop. Before submission I must review the commands and verify the actual GitHub operations. The commits use my supplied name and a temporary local email (git-assignment@localhost); the exact GitHub handle and my account email still need confirmation.</p>
+</section>
+<section><h2>7. Sources &amp; Reflection</h2>
+<p contenteditable="true">Sources: Assignment 1 and Report Template - group A.pdf; Git presentation Session 1 - group A.pdf; the supplied Assignment1_Starter archive; GitHub documentation about valid account handles. The report and evidence should be reviewed before submission.</p>
+<p contenteditable="true">Draft reflection - personalize before submitting: The difference between fetch and pull is a concept I need to confirm: fetch updates remote knowledge, while pull integrates changes. If Git behaves unexpectedly, I would first inspect git status, the active branch, and git remote -v.</p>
+</section>
+</body></html>
