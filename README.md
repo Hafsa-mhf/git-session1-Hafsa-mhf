@@ -3,7 +3,7 @@
 **Full name:** Hafsa El Mahfoudy  
 **Student ID:** 158085  
 **Course and section:** CSC 3324 01  
-**GitHub username:** USERNAME_PENDING  
+**GitHub username:** Hafsa-mhf  
 **GitHub display name supplied:** Hafsa mhf
 
 ## Description

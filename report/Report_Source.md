@@ -3,7 +3,7 @@
 Full Name: Hafsa El Mahfoudy
 Student ID: 158085
 Course Code & Section: CSC 3324 01
-GitHub Username: USERNAME_PENDING
+GitHub Username: Hafsa-mhf
 Display name supplied: Hafsa mhf
 
 Status: Local work complete; GitHub tasks pending.
@@ -16,7 +16,7 @@ A simple issue was demonstrated and solved: the broad *.log pattern initially ig
 
 ## 2. README & Commit History
 
-README.md contains my name, student ID, course/section, the supplied display name, a project description, a technologies list, a Bash code block, a documentation link, and the provided assets/project-banner.svg image. USERNAME_PENDING marks the exact GitHub handle that must be confirmed.
+README.md contains my name, student ID, course/section, the supplied display name, a project description, a technologies list, a Bash code block, a documentation link, and the provided assets/project-banner.svg image. Hafsa-mhf marks the exact GitHub handle that must be confirmed.
 
 Five content commits record setup, the overview improvement, CSS styling, the JavaScript status message, and the About feature. An explicit merge commit integrates the feature. The PDF and evidence are added in an additional commit after the workflow captures.
 
