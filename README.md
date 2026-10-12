@@ -29,10 +29,10 @@ git status
 [Git command reference](https://git-scm.com/docs)
 
 ## Preparation status
-Local Git work was prepared with AI assistance. GitHub publication, the online README edit, fetch/pull evidence, and URL submission are pending. The exact account handle must be confirmed; display names may differ from account handles.
+GitHub publication and fetch/pull are complete. Evidence: evidence/GitHub_Evidence.txt.
 
 ## Report
-The report draft and editable source are included after the local-workflow commits. Finalize the online steps and review the report before submitting the repository URL.
+[Assignment report](Assignment1_Report_158085.pdf)
 
 This sentence was added directly on GitHub to practice fetching and pulling remote changes.
 
